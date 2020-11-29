@@ -9,6 +9,7 @@
 	{ "src": "/7ed/social/(.*)", "dest": "https://objectstorage.ap-seoul-1.oraclecloud.com/n/cnbr0vgx02y9/b/social/o/7ed/social/$1", "headers": { "cache-control": "public, max-age=63072000"}},
 	{ "src": "/tgfiles/(.*)", "dest": "https://tgfiles.herokuapp.com/$1", "headers": { "cache-control": "public, max-age=63072000"}},
 	{ "src": "/random/(.*)", "dest": "https://uploadbeta.com/api/pictures/random/?key=BingEverydayWallpaperPicture&id=$1"},
+	{ "src": "/og/(light|dark)/([0-9]+)/(.*)", "dest": "https://cdn.statically.io/og/theme=$1,fontsize=$2px/$3.png"},
 	{ "src": "/(.*)", "dest": "https://cdn.statically.io/img/$1", "headers": { "cache-control": "public, max-age=63072000"}},
 	{ "src": "/(.*)", "status": 404, "dest": "/404.jpg" }
   ]
