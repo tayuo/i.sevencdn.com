@@ -4,6 +4,7 @@
 	{ "handle": "filesystem" },
 	{ "src": "/", "dest": "/index.html"},
 	{ "src": "/favicon.ico", "dest": "/favicon.ico"},
+	{ "src": "/favicon/(.*)", "dest": "https://favicon.cons.workers.dev/?url=$1", "headers": { "cache-control": "public, max-age=63072000"}},
 	{ "src": "/tootssocial/(.*)", "dest": "https://toots.s3.nl-ams.scw.cloud/$1", "headers": { "cache-control": "public, max-age=63072000"}},
 	{ "src": "/(accounts|cache|custom_emojis|media_attachments|preview_cards|site_uploads)/(.*)", "dest": "https://toots.s3.nl-ams.scw.cloud/$1/$2", "headers": { "cache-control": "public, max-age=63072000"}},
 	{ "src": "/raw.githubusercontent.com/([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)/(.*)", "status": 307, "headers": { "Location": "https://cdn.jsdelivr.net/gh/$1/$2@$3/$4" }},
