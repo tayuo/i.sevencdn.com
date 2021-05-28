@@ -6,7 +6,7 @@
 	{ "src": "/favicon.ico", "dest": "/favicon.ico"},
 	{ "src": "/favicon/(.*)", "dest": "https://favicon.cons.workers.dev/?url=$1", "headers": { "cache-control": "public, max-age=63072000"}},
 	{ "src": "/tootssocial/(.*)", "dest": "https://toots.s3.nl-ams.scw.cloud/$1", "headers": { "cache-control": "public, max-age=63072000"}},
-	{ "src": "/(accounts|cache|custom_emojis|media_attachments|preview_cards|site_uploads)/(.*)", "dest": "https://toots.s3.nl-ams.scw.cloud/$1/$2", "headers": { "cache-control": "public, max-age=63072000"}},
+	{ "src": "/(accounts|cache|custom_emojis|media_attachments|preview_cards|site_uploads|backups)/(.*)", "dest": "https://toots.s3.nl-ams.scw.cloud/$1/$2", "headers": { "cache-control": "public, max-age=63072000"}},
 	{ "src": "/raw.githubusercontent.com/([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)/(.*)", "status": 307, "headers": { "Location": "https://cdn.jsdelivr.net/gh/$1/$2@$3/$4" }},
 	{ "src": "/random/(.*)", "status": 307, "headers": { "Location": "https://7ed.net/bing/api?id=$1" }},
 	{ "src": "/og/(light|dark)/([0-9]+)/(.*)", "dest": "https://cdn.statically.io/og/theme=$1,fontsize=$2px/$3.png"},
